@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "dist/**/*",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist" }
+      },
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "api/**/*.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
+  
