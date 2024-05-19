@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url("../images/sitebg.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+::selection {
+  background: orangered;
+  color: white;
+}
+
+input {
+  background: white;
+  border: 1px solid black;
+}
+input:focus {
+  background: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  margin-left: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fb6400;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e55b00;
+}
+
+.settingsToHover:hover .slideText {
+  transform: translateX(-100%);
+}
+
+.slideText {
+  display: inline-block;
+  transition: transform 1.5s linear;
+  text-wrap: nowrap;
+}
